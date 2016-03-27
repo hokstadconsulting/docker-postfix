@@ -1,5 +1,5 @@
 
-# Docker Postix container
+# Docker Postfix container
 
 Very basic initial Docker container for postfix. 
 
