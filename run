@@ -1,0 +1,10 @@
+#!/bin/sh
+
+postmap /etc/postfix/vmailbox
+postmap /etc/postfix/valias
+
+postfix start
+
+trap "postfix stop && exit" SIGKILL SIGTERM SIGHUP SIGINT EXIT
+
+while (postfix status); do echo RUNNING; sleep 30; done
