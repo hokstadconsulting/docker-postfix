@@ -1,7 +1,8 @@
 
 # Docker Postfix container
 
-Very basic initial Docker container for postfix. 
+Very basic Docker container for postfix. We use this primarily to handle forwarding for
+secondary domains, and so very little is done to make configuration flexible.
 
 To log you need to mount /dev/log in the container. The alternative is to build another one
 with a syslog. 
